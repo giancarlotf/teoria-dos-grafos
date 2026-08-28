@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include <string.h>
 #include "grafo_matriz.h"
 
 void inicializar(GrafoMatriz *grafo, int numero) {
-   memset(grafo, 0, sizeof(GrafoMatriz));
-   grafo->num_vertices = numero;
+   
 }
 
 void inserir_aresta(GrafoMatriz *grafo, int u, int v) {
