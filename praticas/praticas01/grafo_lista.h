@@ -2,21 +2,23 @@
 #define GRAFO_LISTA_H
 
 // Lista de adjacência
-typedef struct No {
+typedef struct No
+{
     int destino;
     struct No *prox;
 } No;
 
-typedef struct {
+typedef struct
+{
     int n;
     No **adj;
 } GrafoLista;
 
-GrafoLista criar_grafo_lista(int n);
-void inserir_aresta_(No *u, No *v);
-void remover_aresta_(No *u, No *v);
-void grau_();
-void sao_adjacentes_();
-void liberar_grafo_(GrafoLista grafo);
+GrafoLista *criar_grafo_lista(int n);
+void inserir_aresta_lista(GrafoLista *grafo, int u, int v);
+void remover_aresta_lista(GrafoLista *grafo, int u, int v);
+int grau_lista(GrafoLista *grafo, int v);
+int sao_adjacentes_lista(GrafoLista *grafo, int u, int v);
+void liberar_grafo_lista(GrafoLista *grafo);
 
 #endif
