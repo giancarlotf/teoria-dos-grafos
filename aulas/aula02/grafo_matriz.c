@@ -2,7 +2,7 @@
 #include <string.h>
 #include "grafo_matriz.h"
 
-void inicializar(GrafoMatriz *grafo, int numero){
+void inicializar(GrafoMatriz *grafo, int numero) {
    memset(grafo, 0, sizeof(GrafoMatriz));
    grafo->num_vertices = numero;
 }
