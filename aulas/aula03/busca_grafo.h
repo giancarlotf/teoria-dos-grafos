@@ -4,6 +4,6 @@
 #include "grafo_lista.h"
 
 void dfs(GrafoLista *grafo, int u, int *visitado);
-void bfs(GrafoLista *grafo, int u, int *visitado);
+void bfs(GrafoLista *grafo, int u, int *fila, int *visitado);
 
 #endif

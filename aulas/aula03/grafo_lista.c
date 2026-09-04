@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "grafo_lista.h"
 
 GrafoLista *criar_grafo_lista(int n)
@@ -59,24 +59,6 @@ void remover_aresta_lista(GrafoLista *grafo, int u, int v)
         remover_aresta(&(grafo->adj[u]), v);
         remover_aresta(&(grafo->adj[v]), u);
     }
-}
-
-int grau_lista(GrafoLista *grafo, int v)
-{
-    int grau = 0;
-
-    if (v >= 0 && v < grafo->n)
-    {
-        No *atual = grafo->adj[v];
-
-        while (atual != NULL)
-        {
-            grau++;
-            atual = atual->prox;
-        }
-    }
-
-    return grau;
 }
 
 int sao_adjacentes_lista(GrafoLista *grafo, int u, int v)
