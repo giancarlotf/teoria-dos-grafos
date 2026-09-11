@@ -85,6 +85,47 @@ void liberar_grafo(GrafoLista *grafo)
     free(grafo);
 }
 
+Fila* criar_fila(int capacidade)
+{
+    Fila *f = (Fila*) malloc(sizeof(Fila));
+    f->capacidade = capacidade;
+    f->dados = (int*) malloc(capacidade * sizeof(int));
+    f->inicio = 0;
+    f->fim = -1;
+    f->tamanho = 0;
+    return f;
+}
+
+void enfileirar(Fila *f, int v)
+{
+    if (f->tamanho < f->capacidade)
+    {
+        f->fim = (f->fim + 1) % f->capacidade;
+        f->dados[f->fim] = v;
+        f->tamanho++;
+    }
+}
+
+int desenfileirar(Fila *f)
+{
+    if (f->tamanho == 0) return -1;
+    int v = f->dados[f->inicio];
+    f->inicio = (f->inicio + 1) % f->capacidade;
+    f->tamanho--;
+    return v;
+}
+
+int fila_vazia(Fila *f)
+{
+    return f->tamanho == 0;
+}
+
+void liberar_fila(Fila *f)
+{
+    free(f->dados);
+    free(f);
+}
+
 int *ordenacao_topologica_kahn(GrafoLista *g, int *tamanho)
 {
     int n = g->n;
