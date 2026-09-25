@@ -5,6 +5,7 @@ digraph G2 {
     d [shape="circle"]
     e [shape="circle"]
     f [shape="circle"]
+    
     a -> b
     a -> c
     b -> d

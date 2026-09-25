@@ -15,7 +15,7 @@ GrafoLista *criar_grafo_lista(int n)
     return grafo;
 }
 
-void adicionar_aresta(No **fonte, int destino)
+void inserir_arco(No **fonte, int destino)
 {
     No *no = (No *)malloc(sizeof(No));
     no->destino = destino;
@@ -29,13 +29,13 @@ void inserir_aresta_lista(GrafoLista *grafo, int u, int v)
     {
         if (!sao_adjacentes_lista(grafo, u, v))
         {
-            adicionar_aresta(&(grafo->adj[u]), v);
-            adicionar_aresta(&(grafo->adj[v]), u);
+            inserir_arco(&(grafo->adj[u]), v);
+            inserir_arco(&(grafo->adj[v]), u);
         }
     }
 }
 
-void remover_aresta(No **fonte, int destino)
+void remover_arco(No **fonte, int destino)
 {
     No *atual = *fonte;
     No *anterior = NULL;
@@ -57,8 +57,8 @@ void remover_aresta_lista(GrafoLista *grafo, int u, int v)
 {
     if (u >= 0 && u < grafo->n && v >= 0 && v < grafo->n)
     {
-        remover_aresta(&(grafo->adj[u]), v);
-        remover_aresta(&(grafo->adj[v]), u);
+        remover_arco(&(grafo->adj[u]), v);
+        remover_arco(&(grafo->adj[v]), u);
     }
 }
 
