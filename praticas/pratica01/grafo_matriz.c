@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "grafo_matriz.h"
 
 GrafoMatriz *criar_grafo_matriz(int n)
