@@ -1,7 +1,7 @@
 #ifndef BUSCA_LARGURA_H
 #define BUSCA_LARGURA_H
 
-#include "../pratica01/grafo_lista.h"
+#include "grafo_lista.h"
 
 // Fila (FIFO) para BFS
 typedef struct {
