@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "grafo_lista.h"
 #include "busca_largura.h"
 #include "busca_profundidade.h"
+#include "grafo_lista.h"
 
 int main()
 {
