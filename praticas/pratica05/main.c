@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../pratica01/grafo_lista.h"
+#include "grafo_lista.h"
 #include "coloracao.h"
 
 int main()
