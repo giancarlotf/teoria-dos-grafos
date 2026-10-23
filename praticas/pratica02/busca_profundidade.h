@@ -1,7 +1,7 @@
 #ifndef BUSCA_PROFUNDIDADE_H
 #define BUSCA_PROFUNDIDADE_H
 
-#include "../pratica01/grafo_lista.h"
+#include "grafo_lista.h"
 
 // Pilha (LIFO) para DFS iterativa
 typedef struct {
