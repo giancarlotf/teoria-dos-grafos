@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "grafo_lista.h"
 
 GrafoLista *criar_grafo_lista(int n)
