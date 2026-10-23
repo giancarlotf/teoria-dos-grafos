@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#inclede "grafo_lista.h"
 #include "busca_largura.h"
 #include "busca_profundidade.h"
 
