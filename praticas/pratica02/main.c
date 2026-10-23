@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "busca_largura.h"
 #include "busca_profundidade.h"
+#include "grafo_lista.h"
 
 int main()
 {
